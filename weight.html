@@ -1,0 +1,69 @@
+<!-- weight converter app -->
+html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight converter App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin-top: 70px;
+        background: #333 ;
+        color: #fff;
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+        <h1 class="display-4 text-center mb-3">Weight converter App</h1>
+<form >
+<div class="form_group">
+<input oninput ="doX()"  id="lbsInput" type="text"  class="  form-control  form-control-lg" 
+ placeholder="Enter pounds...">
+
+</form>
+<div id="output">
+    <div class="card bg-primary mb-2">        
+        <div class="card-block">
+            <h4>Grams:</h4>
+            <div id="gramsOutput"></div>
+        </div>
+
+    </div>
+    <div class="card bg-success mb-2 ">        
+        <div class="card-block">
+            <h4>kilograms:</h4>
+            <div id="KgOutput"></div>
+        </div>
+
+    </div>
+    <div class="card bg-danger mb-2">        
+        <div class="card-block">
+            <h4>Ounces:</h4>
+            <div id="ozOutput"></div>
+        </div>
+
+    </div>
+</div>
+</div> 
+    </div>
+  <script>
+
+        function doX(){
+             let lbs =  document.getElementById('lbsInput').value ; 
+            document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+            document.getElementById('KgOutput').innerHTML = lbs/2.2046;
+            document.getElementById('ozOutput').innerHTML = lbs*16;
+
+        }
+      
+
+
+    </script>
+</body>
+</html>
